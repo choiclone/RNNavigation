@@ -15,33 +15,11 @@ class App extends Component {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} options={{title: "Home Screen"}}/>
-          <Stack.Screen name="User" component={UserScreen} initialParams={{
-            userIdx: 50,
-            userName: 'Hg',
-            userLastName: 'Choi'
-          }} 
-          // options={{title: "User Screen", 
-          //   headerStyle: {
-          //     backgroundColor: 'pink'
-          //   },
-          //   headerTintColor: 'red',
-          //   headerTitleStyle: {
-          //     fontWeight: 'bold',
-          //     color: 'purple'
-          //   }
-          // }}
-          />
+          <Stack.Screen name="User" component={UserScreen} initialParams={{ userIdx: 50, userName: 'Hg', userLastName: 'Choi'}}/>
         </Stack.Navigator>
       </NavigationContainer>
     )
   } 
 }
-
-const styles = StyleSheet.create({
-  mainView: {
-    flex: 1,
-    backgroundColor: 'red',
-  },
-});
 
 export default App;
