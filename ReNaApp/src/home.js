@@ -22,12 +22,22 @@
               <Button
                 title="To User Screen"
                 onPress={()=>{
-                    this.props.navigation.navigate('User', {
-                        userIdx: 100,
-                        userName: 'Hg',
-                        userLastName: 'Choi'
-                    })
+                    this.props.navigation.navigate('User'
+                    // , {
+                    //     userIdx: 100,
+                    //     userName: 'Hg',
+                    //     userLastName: 'Choi'
+                    // }
+                    )
                 }}
+              />
+              <Button
+                title="Change the title"
+                onPress={()=>
+                  this.props.navigation.setOptions({title: "Changed!!!", headerStyle: {
+                    backgroundColor: 'pink'
+                  }, headerTintColor: 'red'})
+                }
               />
           </View>
       )
